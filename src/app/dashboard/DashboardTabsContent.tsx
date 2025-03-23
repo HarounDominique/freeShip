@@ -27,7 +27,7 @@ export function DashboardTabsContent({
       </div>
 
       {/* Este contenido será visible solo en pantallas de PC */}
-      <div className="hidden md:block flex-grow h-full w-full p-4 theme-card shadow-md rounded-lg mt-2">
+      <div className="hidden md:block flex-grow">
         <Suspense fallback={<Spinner />}>
           {activeTab === "misProyectos" ? (
             <div className="flex-grow h-full w-full theme-card p-4 rounded-lg shadow-md flex flex-col overflow-hidden">

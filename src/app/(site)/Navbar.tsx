@@ -65,7 +65,7 @@ export default function Navbar({ handleSignOut }: NavbarProps) {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
+      className={`w-full transition-colors duration-300 ${
         theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
       }`}
     >

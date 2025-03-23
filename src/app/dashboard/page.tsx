@@ -43,11 +43,11 @@ export default async function Dashboard({
   };
 
   return (
-    <div className="flex flex-col h-screen bg-white">
-      <Navbar handleSignOut={handleSignOut} className="bg-white shadow-md" />
+    <main className="flex flex-col h-screen bg-white">
+      <Navbar handleSignOut={handleSignOut} />
 
       {/* Contenedor principal */}
-      <div className="h-0 flex-grow flex flex-col overflow-hidden w-full mt-20 bg-white shadow-md rounded-lg">
+      <div className="h-0 flex-grow flex flex-col overflow-hidden w-full bg-white ">
         {/* Tabs */}
         <div className="flex border-b items-center">
           <Link
@@ -89,12 +89,12 @@ export default async function Dashboard({
         </div>
 
         {/* Contenido con Suspense, usando Spinner como fallback */}
-        <div className="flex-grow overflow-auto p-4">
+        <div className="flex-grow p-4">
           <Suspense fallback={<Spinner />}>
             <DashboardTabsContent activeTab={activeTab} userId={user.id} />
           </Suspense>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

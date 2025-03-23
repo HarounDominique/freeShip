@@ -15,44 +15,23 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 export default function HallProjectCard({ project }: { project: any }) {
-  const [userId, setUserId] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      const supabase = createClient();
-      const { data } = await supabase.auth.getUser();
-      if (data?.user) {
-        setUserId(data.user.id);
-      }
-      setIsLoading(false);
-    };
-    fetchUser();
-  }, []);
-
-  if (isLoading) {
-    return (
-      <li className="w-full sm:w-4/5 mx-auto flex justify-center py-6">
-        <Spinner />
-      </li>
-    );
-  }
+  const isMine = project.is_mine;
 
   // Determina el color del título según la autoría del usuario
   const titleClassName =
-    userId && project.author_id === userId
+    isMine
       ? "my-project-title"
       : "other-project-title";
 
   // Determina la URL del enlace
   const projectUrl =
-    userId && project.author_id === userId
+    isMine
       ? `/dashboard/projects/my-projects/${project.id}`
       : `/dashboard/projects/other/${project.id}`;
 
   return (
     <li
-      className="relative w-full sm:w-4/5 mx-auto border p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.01]"
+      className="w-full sm:w-4/5 justify-self-end border p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.01]"
       style={{
         backgroundColor: "var(--card-bg)",
         borderColor: "var(--border-color)",

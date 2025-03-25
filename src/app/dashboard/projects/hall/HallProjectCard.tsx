@@ -18,16 +18,12 @@ export default function HallProjectCard({ project }: { project: any }) {
   const isMine = project.is_mine;
 
   // Determina el color del título según la autoría del usuario
-  const titleClassName =
-    isMine
-      ? "my-project-title"
-      : "other-project-title";
+  const titleClassName = isMine ? "my-project-title" : "other-project-title";
 
   // Determina la URL del enlace
-  const projectUrl =
-    isMine
-      ? `/dashboard/projects/my-projects/${project.id}`
-      : `/dashboard/projects/other/${project.id}`;
+  const projectUrl = isMine
+    ? `/dashboard/projects/my-projects/${project.id}`
+    : `/dashboard/projects/other/${project.id}`;
 
   return (
     <li

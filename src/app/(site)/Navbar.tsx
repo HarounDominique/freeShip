@@ -107,7 +107,7 @@ export default function Navbar({ handleSignOut }: NavbarProps) {
           {/* Botón de cambio de tema */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            className="p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 duration-200 transition-colors"
             aria-label={`Cambiar a modo ${
               theme === "light" ? "oscuro" : "claro"
             }`}
@@ -123,7 +123,7 @@ export default function Navbar({ handleSignOut }: NavbarProps) {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
-              className="flex items-center gap-2 font-medium hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-md transition"
+              className="flex items-center gap-2 font-medium hover:bg-gray-200/50 dark:hover:bg-gray-700/50 p-2 rounded-md transition duration-200"
             >
               <User className="h-5 w-5" />
               <span>{username}</span>

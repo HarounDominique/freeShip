@@ -67,7 +67,7 @@ export default function HallDashboardView({ userId }: { userId: string }) {
       {/* Versión para PC */}
       {!isMobile && (
         <>
-          <h2 className="text-5xl font-bold mb-6 text-center">⇀ 1% ↼</h2>
+          <h3 className="text-3xl font-bold mb-6 text-center">⇀ Hall of Fame ↼</h3>
           <div className="w-full max-w-3xl overflow-y-auto max-h-[80vh]">
             <ul className="space-y-6 pb-20">
               {projects.map((project, index) => (
@@ -83,7 +83,7 @@ export default function HallDashboardView({ userId }: { userId: string }) {
       {/* Versión para móvil */}
       {isMobile && (
         <div className="overflow-y-auto max-h-[calc(100vh-250px)]">
-          <h2 className="text-3xl font-bold mb-4 text-center">⇀ 1% ↼</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">⇀ Hall of Fame ↼</h2>
           <div className="w-full max-w-md mx-auto overflow-y-auto max-h-[70vh]">
             <ul className="space-y-4 pb-20">
               {projects.map((project, index) => (

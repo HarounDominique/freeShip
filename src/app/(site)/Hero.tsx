@@ -78,18 +78,15 @@ const HeroSection = ({ loginSectionRef }) => {
       </svg>
 
       {/* Título */}
-      <h1
-        className="text-5xl font-semibold mt-4"
-        style={{ color: "var(--text-primary)" }}
-      >
-        bugoverflow
+      <h1 className="text-5xl font-semibold mt-4" style={{ color: "var(--text-primary)" }}>
+        <span className="text-4xl !text-[#acd916]">BUG</span><span className="font-normal">overflow</span>
       </h1>
 
       {/* Flecha para hacer scroll */}
       <button
         onClick={scrollToLogin}
         className="absolute top-[75%] animate-bounce transition-opacity duration-1000"
-        style={{ backgroundColor: "transparent" }} // Aquí se asegura de que no haya fondo visible
+        style={{ backgroundColor: "transparent" }}
       >
         <ChevronDownIcon className="w-12 h-12 text-[var(--accent-color)]" />
       </button>

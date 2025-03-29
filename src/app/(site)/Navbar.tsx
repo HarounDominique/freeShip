@@ -99,7 +99,13 @@ export default function Navbar({ handleSignOut }: NavbarProps) {
                 <path fill="#acd916" d="M3.7 37.28h13.4v26.8H3.7z"></path>
               </g>
             </svg>
-            <span className="text-lg font-semibold">bugoverflow</span>
+            <span
+              className="font-semibold mt-4"
+              style={{ color: "var(--text-primary)" }}
+            >
+              <span className="my-project-edit-title font-bold">BUG</span>
+              <span className="font-normal text-xl">overflow</span>
+            </span>
           </Link>
         </div>
 

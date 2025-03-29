@@ -78,8 +78,12 @@ const HeroSection = ({ loginSectionRef }) => {
       </svg>
 
       {/* Título */}
-      <h1 className="text-5xl font-semibold mt-4" style={{ color: "var(--text-primary)" }}>
-        <span className="text-4xl !text-[#acd916]">BUG</span><span className="font-normal">overflow</span>
+      <h1
+        className="text-5xl font-semibold mt-4"
+        style={{ color: "var(--text-primary)" }}
+      >
+        <span className="text-4xl my-project-edit-title">BUG</span>
+        <span className="font-normal">overflow</span>
       </h1>
 
       {/* Flecha para hacer scroll */}
